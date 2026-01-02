@@ -2,7 +2,7 @@ import { RefreshCw } from 'lucide-react';
 
 export function PriceCardSkeleton() {
   return (
-    <div className="group relative h-25 overflow-hidden rounded-xl border border-zinc-800/50 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 p-3 backdrop-blur-sm sm:p-4">
+    <div className="group relative h-25 overflow-hidden rounded-xl border border-zinc-800/50 bg-linear-to-br from-zinc-900/80 to-zinc-950/80 p-3 backdrop-blur-sm sm:p-4">
       <div className="relative space-y-1 h-full flex flex-col justify-between">
         <div className="flex items-center justify-between">
           <div className="h-4 w-16 animate-pulse rounded bg-zinc-700/50" />

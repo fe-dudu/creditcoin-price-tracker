@@ -1,7 +1,7 @@
 import { RefreshCw } from 'lucide-react';
 
-import { QuoteAsset } from '@/entrypoints/popup/apis';
-import { cn } from '@/entrypoints/popup/libs/cn';
+import { QuoteAsset } from '../apis';
+import { cn } from '../libs/cn';
 
 interface Props {
   exchange: string;
@@ -14,8 +14,8 @@ interface Props {
 
 export function PriceCard({ price, exchange, quoteAsset, isFetching, dataUpdatedAt, onRefresh }: Props) {
   return (
-    <div className="group relative h-25 overflow-hidden rounded-xl border border-zinc-800/50 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 p-3 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 sm:p-4">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    <div className="group relative h-25 overflow-hidden rounded-xl border border-zinc-800/50 bg-linear-to-br from-zinc-900/80 to-zinc-950/80 p-3 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 sm:p-4">
+      <div className="absolute inset-0 bg-linear-to-br from-primary/0 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <div className="relative space-y-1 h-full flex flex-col justify-between">
         <div className="flex items-center justify-between">
           <div>
@@ -39,7 +39,7 @@ export function PriceCard({ price, exchange, quoteAsset, isFetching, dataUpdated
           </div>
         </div>
 
-        <p className="text-lg font-bold tabular-nums text-white sm:text-xl break-words overflow-wrap-anywhere">
+        <p className="text-lg font-bold tabular-nums text-white sm:text-xl wrap-break-word overflow-wrap-anywhere">
           {price}
         </p>
         {dataUpdatedAt && <p className="text-xs text-zinc-600">Updated: {new Date(dataUpdatedAt).toLocaleString()}</p>}

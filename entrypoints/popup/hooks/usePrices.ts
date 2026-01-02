@@ -1,5 +1,7 @@
 import { useQueries } from '@tanstack/react-query';
+import { useAtomValue } from 'jotai';
 
+import { QuoteAsset } from '../apis';
 import {
   bithumbQueryOptions,
   bybitQueryOptions,
@@ -9,19 +11,24 @@ import {
   kucoinQueryOptions,
   okxQueryOptions,
   upbitQueryOptions,
-} from '@/entrypoints/popup/constants/query';
+} from '../constants/query';
+import { tabsAtom } from '../stores/tabsAtom';
+
+const queries = [
+  { quoteAsset: 'USD', options: okxQueryOptions },
+  { quoteAsset: 'USD', options: krakenQueryOptions },
+  { quoteAsset: 'USDT', options: bybitQueryOptions },
+  { quoteAsset: 'USDT', options: gateioQueryOptions },
+  { quoteAsset: 'USDT', options: kucoinQueryOptions },
+  { quoteAsset: 'KRW', options: upbitQueryOptions },
+  { quoteAsset: 'KRW', options: bithumbQueryOptions },
+  { quoteAsset: 'KRW', options: coinoneQueryOptions },
+];
 
 export function usePrices() {
+  const tabs = useAtomValue(tabsAtom);
+
   return useQueries({
-    queries: [
-      okxQueryOptions,
-      krakenQueryOptions,
-      bybitQueryOptions,
-      gateioQueryOptions,
-      kucoinQueryOptions,
-      upbitQueryOptions,
-      bithumbQueryOptions,
-      coinoneQueryOptions,
-    ],
+    queries: queries.filter(({ quoteAsset }) => tabs.includes(quoteAsset as QuoteAsset)).map(({ options }) => options),
   });
 }

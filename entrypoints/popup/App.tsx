@@ -1,3 +1,4 @@
+import { FilterTabs } from './components/FilterTabs';
 import { PriceCard } from './components/PriceCard';
 import { PriceCardSkeleton } from './components/PriceCardSkeleton';
 import { usePrices } from './hooks/usePrices';
@@ -7,6 +8,7 @@ function App() {
   const prices = usePrices();
   return (
     <div className="w-full px-4 py-6 grid gap-4">
+      <FilterTabs />
       {prices.map(({ data, dataUpdatedAt, refetch, isLoading, isFetching }, index) => {
         if (isLoading) {
           return <PriceCardSkeleton key={`skeleton-${dataUpdatedAt}-${index.toString()}`} />;

@@ -1,13 +1,13 @@
 import { keepPreviousData, queryOptions } from '@tanstack/react-query';
 
-import { getBithumbLastPrice } from '@/entrypoints/popup/apis/bithumb';
-import { getBybitLastPrice } from '@/entrypoints/popup/apis/bybit';
-import { getCoinoneLastPrice } from '@/entrypoints/popup/apis/coinone';
-import { getGateioLastPrice } from '@/entrypoints/popup/apis/gateio';
-import { getKrakenLastPrice } from '@/entrypoints/popup/apis/kraken';
-import { getKucoinLastPrice } from '@/entrypoints/popup/apis/kucoin';
-import { getOkxLastPrice } from '@/entrypoints/popup/apis/okx';
-import { getUpbitLastPrice } from '@/entrypoints/popup/apis/upbit';
+import { getBithumbLastPrice } from '../apis/bithumb';
+import { getBybitLastPrice } from '../apis/bybit';
+import { getCoinoneLastPrice } from '../apis/coinone';
+import { getGateioLastPrice } from '../apis/gateio';
+import { getKrakenLastPrice } from '../apis/kraken';
+import { getKucoinLastPrice } from '../apis/kucoin';
+import { getOkxLastPrice } from '../apis/okx';
+import { getUpbitLastPrice } from '../apis/upbit';
 
 const QUERY_KEYS = {
   bithumb: ['last-price', 'bithumb'],
