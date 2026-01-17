@@ -1,5 +1,5 @@
 # Creditcoin Price Tracker
-
+![popup](public/screenshot/popup.png)
 Creditcoin Price Tracker is a lightweight Chrome extension that lets you monitor the real-time price of Creditcoin (CTC) across multiple major cryptocurrency exchanges — all in one place.
 
 The extension automatically refreshes price data every 5 seconds, making it ideal for traders, investors, and anyone who wants up-to-date market visibility without constantly refreshing exchange pages.
