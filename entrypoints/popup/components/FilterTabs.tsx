@@ -1,8 +1,8 @@
 import { useAtom } from 'jotai';
 
-import { QuoteAsset } from '../apis';
-import { cn } from '../libs/cn';
-import { tabsAtom } from '../stores/tabsAtom';
+import { QuoteAsset } from '@/apis';
+import { tabsAtom } from '@/entrypoints/popup/stores/tabsAtom';
+import { cn } from '@/libs/cn';
 
 const QUOTE_ASSETS: QuoteAsset[] = ['USD', 'USDT', 'KRW'];
 

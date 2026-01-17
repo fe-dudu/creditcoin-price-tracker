@@ -4,7 +4,7 @@ import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { storage } from '@/entrypoints/popup/libs/storage.ts';
+import { storage } from '@/libs/storage';
 import App from './App.tsx';
 import './style.css';
 

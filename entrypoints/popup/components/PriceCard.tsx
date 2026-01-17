@@ -1,7 +1,7 @@
 import { RefreshCw } from 'lucide-react';
 
-import { QuoteAsset } from '../apis';
-import { cn } from '../libs/cn';
+import { QuoteAsset } from '@/apis';
+import { cn } from '@/libs/cn';
 
 interface Props {
   exchange: string;

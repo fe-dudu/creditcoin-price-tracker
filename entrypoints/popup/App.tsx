@@ -1,8 +1,8 @@
+import { formatDecimalString } from '@/utils/decimal';
 import { FilterTabs } from './components/FilterTabs';
 import { PriceCard } from './components/PriceCard';
 import { PriceCardSkeleton } from './components/PriceCardSkeleton';
 import { usePrices } from './hooks/usePrices';
-import { formatDecimalString } from './utils/decimal';
 
 function App() {
   const prices = usePrices();

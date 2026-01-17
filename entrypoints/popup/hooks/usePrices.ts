@@ -1,7 +1,7 @@
 import { useQueries } from '@tanstack/react-query';
 import { useAtomValue } from 'jotai';
 
-import { QuoteAsset } from '../apis';
+import { QuoteAsset } from '@/apis';
 import {
   bithumbQueryOptions,
   bybitQueryOptions,
@@ -11,8 +11,8 @@ import {
   kucoinQueryOptions,
   okxQueryOptions,
   upbitQueryOptions,
-} from '../constants/query';
-import { tabsAtom } from '../stores/tabsAtom';
+} from '@/entrypoints/popup/constants/query';
+import { tabsAtom } from '@/entrypoints/popup/stores/tabsAtom';
 
 const queries = [
   { quoteAsset: 'USD', options: okxQueryOptions },
