@@ -33,7 +33,7 @@ export function FilterTabs() {
             'px-3 py-2 rounded-lg text-xs font-bold transition-all',
             tabs.includes(quoteAsset)
               ? 'bg-primary text-primary-foreground shadow-md'
-              : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300',
+              : 'bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground',
           )}
         >
           {quoteAsset}

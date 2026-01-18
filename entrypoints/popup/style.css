@@ -32,6 +32,38 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.08 0 0);
+    --foreground: oklch(0.98 0 0);
+    --card: oklch(0.1 0 0);
+    --card-foreground: oklch(0.98 0 0);
+    --popover: oklch(0.1 0 0);
+    --popover-foreground: oklch(0.98 0 0);
+    --primary: oklch(0.72 0.16 165);
+    --primary-foreground: oklch(0.98 0 0);
+    --secondary: oklch(0.15 0 0);
+    --secondary-foreground: oklch(0.98 0 0);
+    --muted: oklch(0.15 0 0);
+    --muted-foreground: oklch(0.64 0 0);
+    --accent: oklch(0.15 0 0);
+    --accent-foreground: oklch(0.98 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.98 0 0);
+    --border: oklch(0.2 0 0);
+    --input: oklch(0.2 0 0);
+    --ring: oklch(0.72 0.16 165);
+    --sidebar: oklch(0.1 0 0);
+    --sidebar-foreground: oklch(0.98 0 0);
+    --sidebar-primary: oklch(0.72 0.16 165);
+    --sidebar-primary-foreground: oklch(0.98 0 0);
+    --sidebar-accent: oklch(0.15 0 0);
+    --sidebar-accent-foreground: oklch(0.98 0 0);
+    --sidebar-border: oklch(0.2 0 0);
+    --sidebar-ring: oklch(0.72 0.16 165);
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -76,7 +108,7 @@
 }
 
 html {
-  background: #0a0a0a;
+  background: var(--background);
   height: 100%;
   overflow-x: hidden;
 }
@@ -85,11 +117,8 @@ body {
   margin: 0;
   display: flex;
   min-width: 350px;
-  min-height: 100vh;
   width: 100%;
-  background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
-  background-attachment: fixed;
-  background-color: #0a0a0a;
+  background: var(--background);
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -99,6 +128,5 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
 }
